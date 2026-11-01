@@ -243,10 +243,10 @@
             }
         }
 
-        // --- 1. ADSGRAM МОДУЛЬ РЕКЛАМЫ (BlockID: 57293) ---
+        // --- 1. ADSGRAM МОДУЛЬ РЕКЛАМЫ (BlockID: 57296) ---
         function triggerRewardedAd(onSuccess) {
             if (window.Adsgram) {
-                const AdController = window.Adsgram.init({ blockId: "57293" });
+                const AdController = window.Adsgram.init({ blockId: "57296" });
                 AdController.show().then((result) => {
                     if (onSuccess) onSuccess();
                 }).catch((result) => {
