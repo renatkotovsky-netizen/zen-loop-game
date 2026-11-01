@@ -243,20 +243,17 @@
             }
         }
 
-        // --- 1. ADSGRAM МОДУЛЬ РЕКЛАМЫ (BlockID: 57030) ---
+        // --- 1. ADSGRAM МОДУЛЬ РЕКЛАМЫ (BlockID: 57293) ---
         function triggerRewardedAd(onSuccess) {
             if (window.Adsgram) {
-                const AdController = window.Adsgram.init({ blockId: "57030" });
+                const AdController = window.Adsgram.init({ blockId: "57293" });
                 AdController.show().then((result) => {
-                    // Успешный досмотр видео
                     if (onSuccess) onSuccess();
                 }).catch((result) => {
                     console.log("Adsgram info:", result);
-                    // Фоллбек: если реклама еще подбирается системами Adsgram, все равно выдаем подсказку
                     if (onSuccess) onSuccess();
                 });
             } else {
-                // Тестовый режим вне Telegram
                 if (onSuccess) onSuccess();
             }
         }
@@ -326,7 +323,6 @@
         ];
 
         const HANDCRAFTED = [
-            // Уровень 1: Квадрат (3х3)
             {
                 cols: 3, rows: 3,
                 grid: [
@@ -335,7 +331,6 @@
                     { type: 2, correctRot: 0 }, { type: 1, correctRot: 1 }, { type: 2, correctRot: 3 }
                 ]
             },
-            // Уровень 2: Восьмерка с центром (3х3)
             {
                 cols: 3, rows: 3,
                 grid: [
@@ -344,7 +339,6 @@
                     { type: 2, correctRot: 0 }, { type: 3, correctRot: 0 }, { type: 2, correctRot: 3 }
                 ]
             },
-            // Уровень 3: Четырехлистник (3х3)
             {
                 cols: 3, rows: 3,
                 grid: [
@@ -353,7 +347,6 @@
                     { type: 2, correctRot: 0 }, { type: 3, correctRot: 0 }, { type: 2, correctRot: 3 }
                 ]
             },
-            // Уровень 4: Два квадрата (4х4)
             {
                 cols: 4, rows: 4,
                 grid: [
@@ -363,7 +356,6 @@
                     { type: 2, correctRot: 0 }, { type: 1, correctRot: 1 }, { type: 1, correctRot: 1 }, { type: 2, correctRot: 3 }
                 ]
             },
-            // Уровень 5: Сеть перекрестков (4х4)
             {
                 cols: 4, rows: 4,
                 grid: [
